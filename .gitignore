@@ -11,7 +11,8 @@
 
 # wp-content directory
 /www/wp-content/plugins
-/www/wp-content/themes
+/www/wp-content/themes/pub
+/www/wp-content/themes/vip
 /www/wp-content/uploads
 /www/wp-content/upgrade
 /www/wp-content/local-sunrise.php
