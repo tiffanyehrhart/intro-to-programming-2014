@@ -122,3 +122,10 @@ exec { 'generate salts':
   command     => 'printf "<?php\n" > /srv/www/local-config.php; curl https://api.wordpress.org/secret-key/1.1/salt/ >> /srv/www/local-config.php',
   refreshonly => true
 }
+
+# Enable / activate theme
+wp::command { 'theme enable intro-to-programming --activate --network':
+  command  => 'theme enable intro-to-programming --activate --network',
+  location => '/srv/www/wp',
+  require  => Exec['wp install /srv/www/wp'],
+}
