@@ -8,3 +8,20 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: pub/twentyfourteen
 */
+
+@import url( '../pub/twentyfourteen/style.css' );
+
+.results-area {
+  background-color: #ccc;
+  border: 1px solid #2cdff4;
+  padding: 25px !important;
+  margin-bottom: 25px !important;
+}
+
+.code-area {
+  background-color: #eae9e9 !important;
+  color: #666;
+  border: 1px solid #333;
+  padding: 25px !important;
+  margin-bottom: 25px !important;
+}
