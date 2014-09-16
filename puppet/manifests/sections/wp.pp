@@ -129,3 +129,23 @@ wp::command { 'theme enable intro-to-programming --activate --network':
   location => '/srv/www/wp',
   require  => Exec['wp install /srv/www/wp'],
 }
+
+# Delete sample content
+wp::command { 'post delete 1 --force':
+  command  => 'post delete 1 --force',
+  location => '/srv/www/wp',
+  require  => Exec['wp install /srv/www/wp'],
+}
+
+wp::command { 'post delete 2 --force':
+  command  => 'post delete 2 --force',
+  location => '/srv/www/wp',
+  require  => Exec['wp install /srv/www/wp'],
+}
+
+# Import the content
+wp::command { 'import /srv/puppet/files/wp/intro-to-programming-content.xml --authors=create':
+  command  => 'import /srv/puppet/files/wp/intro-to-programming-content.xml --authors=create',
+  location => '/srv/www/wp',
+  require  => Exec['wp install /srv/www/wp'],
+}
