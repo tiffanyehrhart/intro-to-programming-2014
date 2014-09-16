@@ -42,7 +42,7 @@ get_header();
       <div class="entry-content">
         <a href="<?php echo esc_url( '/exercises/exercise-' . $prev_exercise ); ?>">Previous</a>
 
-        <a href="<?php echo esc_url( '/exercises/exercise-' . $next_exercise ); ?>">Next</a>
+        <a href="<?php echo esc_url( '/exercises/exercise-' . $next_exercise ); ?>" style="float: right;">Next</a>
       </div>
 
       <div class="entry-content results-area">
