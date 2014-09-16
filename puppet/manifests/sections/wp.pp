@@ -143,6 +143,12 @@ wp::command { 'post delete 2 --force':
   require  => Exec['wp install /srv/www/wp'],
 }
 
+wp::command { 'plugin install wordpress-importer --activate':
+  command  => 'plugin install wordpress-importer --activate',
+  location => '/srv/www/wp',
+  require  => Exec['wp install /srv/www/wp'],
+}
+
 # Import the content
 wp::command { 'import /srv/puppet/files/wp/intro-to-programming-content.xml --authors=create':
   command  => 'import /srv/puppet/files/wp/intro-to-programming-content.xml --authors=create',
