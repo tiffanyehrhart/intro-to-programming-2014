@@ -6,7 +6,7 @@ if ($string == strrev($string)){
 else {return false ;}
 }
 
-$new_jersey_is_palindrome=Is_Palindrome("new jersey") ;
+$new_jersey_is_palindrome=Is_Palindrome("abba") ;
 if($new_jersey_is_palindrome){
   echo "Is Palindrome!";
 }
